@@ -15,27 +15,43 @@ A collection of Solana programs built with Anchor, demonstrating core on-chain d
 
 ## Project Structure
 
-```
+Each program is now isolated in its own workspace crate:
+
+```text
 solana-programs/
 ├── programs/
 │   ├── counter/
+│   │   ├── Cargo.toml
+│   │   └── src/lib.rs
 │   ├── vault/
+│   │   ├── Cargo.toml
+│   │   └── src/lib.rs
 │   ├── todo/
+│   │   ├── Cargo.toml
+│   │   └── src/lib.rs
 │   ├── tip_jar/
+│   │   ├── Cargo.toml
+│   │   └── src/lib.rs
 │   ├── token_factory/
+│   │   ├── Cargo.toml
+│   │   └── src/lib.rs
 │   └── airdrop/
+│       ├── Cargo.toml
+│       └── src/lib.rs
 ├── tests/
-├── Anchor.toml
-└── Cargo.toml
+└── Anchor.toml
 ```
 
 ## Build & Test
 
+Run commands per program directory, for example:
+
 ```bash
-anchor build
-anchor test
-anchor deploy --provider.cluster devnet
+cd programs/counter
+cargo check
 ```
+
+For Anchor workflows, do the same from the specific program directory when the Anchor configuration is added there.
 
 ## Devnet Deployments
 
