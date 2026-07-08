@@ -4,13 +4,13 @@ Anchor programs: counter, vault, SPL tooling, CPI patterns, Token-2022. Written 
 
 **Stack:** Rust · Anchor · TypeScript · Solana CLI
 
-**Status:** work in progress - updated daily.
+**Status:** active development.
 
 ## Goal
 
-Build a compact but serious Anchor workspace that demonstrates Solana fundamentals through small, testable programs. Each program is intended to show one concrete pattern: accounts, PDAs, constraints, custom errors, SPL Token flows, CPI, staking, Token-2022 extensions, and security checks.
+Build a compact but serious Anchor workspace for reusable Solana program patterns. Each program focuses on one concrete area: accounts, PDAs, constraints, custom errors, SPL Token flows, CPI, staking, Token-2022 extensions, and security checks.
 
-This repository is the main training ground for on-chain Solana development.
+This repository is the on-chain systems workspace for focused program development and integration testing.
 
 ## Workspace Layout
 
