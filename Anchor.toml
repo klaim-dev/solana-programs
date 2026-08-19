@@ -1,0 +1,21 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+counter = "BzDa1WDtCVVhy3PasxqZk4L4BSdxhc68ji9qnw5B42bA"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test"
+
+[workspace]
+members = ["programs/counter"]
+
+[hooks]

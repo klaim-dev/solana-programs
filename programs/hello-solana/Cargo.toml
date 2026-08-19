@@ -1,0 +1,20 @@
+[package]
+name = "hello-solana"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "hello_solana"
+
+[features]
+custom-heap = []
+custom-panic = []
+default = []
+no-entrypoint = []
+
+[dependencies]
+solana-program = "=3.0.0"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
