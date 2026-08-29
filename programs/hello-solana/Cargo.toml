@@ -16,5 +16,13 @@ no-entrypoint = []
 [dependencies]
 solana-program = "=3.0.0"
 
+[dev-dependencies]
+litesvm = "=0.10.0"
+solana-message = "=3.1.0"
+solana-transaction = "=3.1.0"
+solana-signer = "=3.0.1"
+solana-keypair = "=3.1.2"
+
+
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

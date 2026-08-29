@@ -8,13 +8,9 @@ pub struct Increment<'info> {
     counter: Account<'info, Counter>,
 }
 
-
 impl<'info> Increment<'info> {
-    
-
-pub fn increment_counter(ctx: Context<Increment>) -> Result<()> {
-    ctx.accounts.counter.value += 1;
-    Ok(())
-}
-
+    pub fn increment_counter(ctx: Context<Increment>) -> Result<()> {
+        ctx.accounts.counter.value += 1;
+        Ok(())
+    }
 }

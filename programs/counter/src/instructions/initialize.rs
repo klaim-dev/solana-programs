@@ -1,5 +1,5 @@
-use anchor_lang::prelude::*;
 use crate::state::Counter;
+use anchor_lang::prelude::*;
 #[derive(Accounts)]
 pub struct Initialize<'info> {
     #[account(
@@ -8,18 +8,16 @@ pub struct Initialize<'info> {
         space = Counter::DISCRIMINATOR.len() + Counter::INIT_SPACE
     )]
     pub counter: Account<'info, Counter>,
-    
+
     #[account(mut)]
     pub authority: Signer<'info>,
 
     pub system_program: Program<'info, System>,
-
 }
 
 impl<'info> Initialize<'info> {
-
-pub fn initialize_counter(ctx: Context<Initialize>) -> Result<()> {
-    ctx.accounts.counter.value = 0;
-    Ok(())
-}
+    pub fn initialize_counter(ctx: Context<Initialize>) -> Result<()> {
+        ctx.accounts.counter.value = 0;
+        Ok(())
+    }
 }
