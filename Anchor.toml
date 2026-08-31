@@ -7,15 +7,16 @@ skip-lint = false
 
 [programs.localnet]
 counter = "BzDa1WDtCVVhy3PasxqZk4L4BSdxhc68ji9qnw5B42bA"
+vault = "H4mu26X6TMSWsHf85QLSLh6KMP4MJ1hBtH4eAs1QED6R"
 
 [provider]
 cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
-[scripts]
-test = "cargo test"
-
 [workspace]
 members = ["programs/counter"]
+
+[scripts]
+test = "cargo test"
 
 [hooks]
